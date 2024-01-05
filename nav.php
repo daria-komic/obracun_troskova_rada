@@ -1,8 +1,8 @@
 <nav>
 <?php 
+    echo "<a class='poveznica' href='index.php'>Početna</a>";
+    echo "<a class='poveznica' href='prikaz_place.php'>Pregled plaće</a>";
     if(!isset($_SESSION["korime"])){
-        echo "<a class='poveznica' href='index.php'>Početna</a>";
-        echo "<a class='poveznica' href='prikaz_place.php'>Pregled plaće</a>";
         echo "<a class='poveznica' href='prijava.php'>Prijava</a>";
     }else{
         echo "<a class='poveznica' href='evidencija_rada.php'>Evidentiraj rad korisnika</a>";

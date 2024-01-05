@@ -90,10 +90,11 @@
                     d.iznos_doprinosa,
                     d.trosak_za_poslodavca
                     FROM dijelovi_obracuna_place d
-                    LEFT JOIN zaposlenik z ON d.zaposlenik = z.oib
-                    LEFT JOIN bruto_placa b ON b.zaposlenik = d.zaposlenik
-                    LEFT JOIN neto_placa n ON n.zaposlenik = d.zaposlenik
-                    WHERE d.zaposlenik = '{$id}' AND d.mjesec = '{$mjesec}' AND d.godina = '{$godina}'";
+                    INNER JOIN zaposlenik z ON d.zaposlenik = z.oib
+                    INNER JOIN bruto_placa b ON z.oib = b.zaposlenik
+                    INNER JOIN neto_placa n ON b.zaposlenik = n.zaposlenik
+                    WHERE d.zaposlenik = '{$id}' AND d.mjesec = '{$mjesec}' AND d.godina = '{$godina}'
+                    AND b.mjesec = '{$mjesec}' AND b.godina = '{$godina}' AND n.mjesec = '{$mjesec}' AND n.godina = '{$godina}'";
 
                     $rezultat = $veza->query($upit);
 
