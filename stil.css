@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+label {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 8px; 
+    text-align: center;
+    border-bottom: 1px solid #ddd; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+input[type="text"], select, input[type="submit"], input[type="password"] {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 450px;
+    box-sizing: border-box; 
+    font-size: 16px; 
+}
+.poveznica{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.poveznica:hover {
+    background-color: lightgrey; 
+    color: black; 
+}
+.poveznica:hover {
+    background-color: lightgrey; 
+    color: black; 
+}
+table.obracunska {
+    border-collapse: unset;
+    text-align: left;
+}
+
+#naslov{
+    background-color: white;
+    border-radius: 0px;
+    text-align: center;
+}
